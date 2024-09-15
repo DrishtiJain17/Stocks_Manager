@@ -1,0 +1,9 @@
+Flask==2.3.3
+Flask-Migrate==4.0.4
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.0.4
+Flask-Security==5.0.0
+Flask-Caching==2.0.0
+psycopg2-binary==2.9.6
+Jinja2==3.1.2
+Werkzeug==2.3.6

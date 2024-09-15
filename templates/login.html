@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Login</title>
+  </head>
+  <body class="container mt-5">
+    <h1 class="mb-4 text-center">Login</h1>
+    <div class="text-center"></div>
+        <a href="/"><-Back to Home</a>
+      </div>
+
+    <!-- Display Flash Messages -->
+    <div class="mb-3">
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <div class="alert alert-info">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %} {% endwith %}
+    </div>
+
+    <form
+      action="{{ url_for('user_routes.login') }}"
+      method="POST"
+      class="needs-validation"
+      novalidate
+    >
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="email"
+          placeholder="Enter email"
+          required
+        />
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+          placeholder="Enter password"
+          required
+        />
+        <div class="invalid-feedback">Please enter your password.</div>
+      </div>
+
+      <a href="/register" class="justify-content-center"
+        >New to Stockify? Sign up today -></a
+      >
+      <br /><br />
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </body>
+</html>

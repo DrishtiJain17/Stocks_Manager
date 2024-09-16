@@ -52,10 +52,7 @@ This will install Flask, Flask-Security, psycopg2, and other required libraries.
 
 Make sure PostgreSQL is running on your system. Create a database for the application:
 
-1. Open PostgreSQL shell:
-   ```bash
-   psql -U postgres
-   ```
+1. Open PostgreSQL shell and Login with your PostgreSQL credentials.
 2. Create the database:
    ```bash
    CREATE DATABASE stocks_db;
@@ -96,6 +93,8 @@ You will be able to:
 - Register a new account
 - Log in
 - Perform CRUD operations on stocks
+- Use pagination to browse through vaious stock entries
+- Log out
 
 ## Additional Features
 

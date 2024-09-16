@@ -17,6 +17,7 @@ def aboutstockify():
 
 
 @stock_routes.route('/add_stock', methods=['GET','POST'])
+@login_required
 def add_stock():
     if request.method == "POST":
         data = request.form
@@ -37,6 +38,7 @@ def add_stock():
     return render_template("add_stock.html")
 
 @stock_routes.route('/editstock/<int:id>', methods=['GET', 'POST'])
+@login_required
 def edit_stock(id):
     stockinfo = Stock.query.get_or_404(id)
     if request.method == 'POST':
@@ -49,6 +51,7 @@ def edit_stock(id):
     return render_template("edit_stock.html",stockinfo=stockinfo)
 
 @stock_routes.route('/stocks/<int:id>/delete', methods=['GET','POST'])
+@login_required
 def delete_stock(id):
     if request.method == 'POST':
         stock = Stock.query.get_or_404(id)

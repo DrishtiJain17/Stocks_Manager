@@ -7,3 +7,4 @@ Flask-Caching==2.3.0
 psycopg2-binary==2.9.9
 Jinja2==3.1.4
 Werkzeug==3.0.3
+setuptools==80.9.0
